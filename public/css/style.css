@@ -241,6 +241,10 @@ li.list-group-item:hover img {
     width: 100%;
     padding: 0;
   }
+
+  .outer-layer {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 801px) and (max-width: 1024px) { 
@@ -249,11 +253,6 @@ li.list-group-item:hover img {
   }
 }
 
-@media screen and (max-width: 900px) {
-  .outer-layer {
-    width: 80%;
-  }
-}
 
 /* Styles for React Tags */
 .ReactTags {
