@@ -111,17 +111,6 @@ exports.delete = function(req, res) {
   });
 };
 
-exports.addUserToGroup = function(req, res) {
-  var user = req.user;
-  user.groups.push(req.group.id);
-
-  user.saveAll().then(function(doc) {
-    res.json(doc);
-  }).error(function(err) {
-    res.status(500).send('Could not add user to group');
-  });
-};
-
 /**
  * Middleware that fetches a user through the id of that user
  * @param  {object}    req   http request
