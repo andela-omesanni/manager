@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 let img = require('../../images/delete.png');
 
 class UsersList extends Component {
   componentWillMount() {
     this.props.fetchUsers();
-  }
-
-  componentWillReceiveProps(nextProps) {
-    
   }
 
   renderUsers(users) {

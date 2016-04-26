@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 let img = require('../../images/delete.png');
 
 class GroupsList extends Component {
-  componentWillMount() {
-  }
-
-  componentWillReceiveProps(nextProps) {
-    
-  }
 
   renderGroups(groups) {
     return groups.map((group, index) => {
