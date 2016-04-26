@@ -138,6 +138,7 @@ li.list-group-item img {
   width: 20px;
   height: 20px;
   align-self: center;
+  margin-right: 10px;
 }
 
 li.list-group-item .list-group-item__name-div {
