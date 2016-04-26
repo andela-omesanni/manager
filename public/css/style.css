@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial;
+  font-size: 12px;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.spacer {
+  margin-top: 1.5em !important;
+}
+
+.spacer.large {
+  margin-top: 2.5em !important;
+}
+
+.spacer.xlarge {
+  margin-top: 3.5em !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5em
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+
+nav.navbar {
+  background-color: rgb(63,81,181);
+  padding: 5px 0 5px 0;
+  width: 100%; 
+  color: white;
+  text-align: center; 
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+              0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+              0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 
+              0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+#creation-container {
+  width: 60%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  display: -webkit-inline-flex; 
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+#creation-container #user-form-wrapper, #creation-container #group-form-wrapper {
+  flex: 1;
+  -webkit-flex: 1;
+  padding: 25px 0 25px 0;
+}
+
+#creation-container #user-form-wrapper {
+  border-right: 1px solid #ccc;
+}
+
+#user-form-wrapper > form, #group-form-wrapper > form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#user-form-wrapper label , #group-form-wrapper label {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  padding-bottom: 5px;
+}
+
+.has-error .help-block {
+  color: #a94442;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+#lists-wrapper {
+  display: flex;
+  display: -webkit-flex; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 60%;
+  padding: 20px;
+}
+
+#lists-wrapper .list {
+  width: 50%;
+  padding: 20px;
+}
+
+#lists-wrapper .list ul {
+  max-height: 300px;
+  overflow: scroll;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.list-group-item {
+  padding: 5px 0 5px 0;
+  display: flex;
+  justify-content: space-between;
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+li.list-group-item:last-child {
+  border: none;
+}
+
+li.list-group-item img {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+}
+
+li.list-group-item .list-group-item__name-div {
+  width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+li.list-group-item a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li.list-group-item:hover {
+  background: #f6f6f6;
+}
+
+li.list-group-item:hover a {
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+li.list-group-item:hover img { 
+  cursor: pointer;
+}
+
+.outer-layer {
+  width: 50%;
+}
+
+.details-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-wrapper .header {
+  font-size: 18px;
+  display: block;
+}
+
+.details-loading {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.chips-container {
+  overflow: scroll;
+  max-height: 200px;
+}
+        
+.chips-container .chips {
+  background-color: #e4e4e4;
+  display: inline-block;
+  margin: 5px 0 0 5px;
+  padding: 5px 7px;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 450px) {
+  #creation-container {
+    padding: 0 20px 20px 20px;
+    flex-flow: column;
+  }
+
+  #creation-container #user-form-wrapper {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  #user-form-wrapper > form, #group-form-wrapper > form {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #creation-container, #lists-wrapper {
+    width: 85%;
+  }
+
+  #lists-wrapper {
+    flex-flow: column;
+  }
+
+  #lists-wrapper .list {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1024px) { 
+  #creation-container, #lists-wrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .outer-layer {
+    width: 80%;
+  }
+}
+
+/* Styles for React Tags */
+.ReactTags {
+  position: relative;
+  padding: 6px 0 0 6px;
+  border: 1px solid #D1D1D1;
+  border-radius: 1px;
+  font-size: 1em;
+  line-height: 1.2;
+  cursor: text;
+  margin-top: 1.5em ;
+  width: 50%;
+}
+
+/* Styles for the currently selected tags */
+.ReactTags__selected {
+  display: inline;
+}
+
+.ReactTags__tag {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 6px 6px 0;
+  padding: 6px 8px;
+  border: 1px solid #D1D1D1;
+  border-radius: 2px;
+  background: #F1F1F1;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.ReactTags__tag:after {
+  content: '\2715';
+  color: #AAA;
+  margin-left: 6px;
+}
+
+/* Styles for the input area */
+.ReactTags__tagInput {
+  display: inline-block;
+  padding: 7px 2px;
+  margin-bottom: 6px;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 30em) {
+  .ReactTags__tagInput {
+    /* this will be the offsetParent for suggestions */
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .ReactTags {
+    width: 90%;
+  }
+}
+
+.ReactTags__tagInput input {
+  /* prevent autoresize overflowing the container */
+  max-width: 100%;
+
+  /* remove styles and layout from this element */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+
+  /* match the font styles */
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.ReactTags__tagInput input::-ms-clear {
+  display: none;
+}
+
+/* Styles for suggestions */
+.ReactTags__suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 30em) {
+  .ReactTags__suggestions {
+     width: 240px;
+  }
+}
+
+.ReactTags__suggestions ul {
+  margin: 4px -1px;
+  padding: 0;
+  list-style: none;
+  background: white;
+  border: 1px solid #D1D1D1;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ReactTags__suggestions li {
+  border-bottom: 1px solid #ddd;
+  padding: 6px 8px;
+}
+
+.ReactTags__suggestions li mark {
+  text-decoration: underline;
+  background: none;
+  font-weight: 600;
+}
+
+.ReactTags__suggestions li.is-active {
+  background: #b7cfe0;
+  cursor: pointer;
+}
+
+.ReactTags__suggestions li.is-disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
