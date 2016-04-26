@@ -71,10 +71,12 @@ exports.create = function(req, res) {
 exports.update = function(req, res) {
   var user = req.user;
   
+  // if we are updating group details of user
   if(req.body.groupId) {
     if(req.body.action == 'addToGroup') {
       user.groups.push(req.body.groupId);
     } 
+    // remove from group
     else {
       var index = user.groups.findIndex(function(group) {
         return group.id === req.body.groupId;
@@ -82,6 +84,7 @@ exports.update = function(req, res) {
       user.groups.splice(index, 1);
     }
   }
+  // updating other details e.g. name
   else {
     user = _.extend(user, req.body);
   }
