@@ -2,7 +2,7 @@ var users = require('../controllers/user.controller');
 var groups = require('../controllers/group.controller');
 
 module.exports = function(app) {
-  
+
   app.route('/api/users')
      .get(users.all)
      .post(users.create);

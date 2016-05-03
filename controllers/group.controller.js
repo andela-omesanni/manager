@@ -107,7 +107,7 @@ exports.checkIfGroupNameAlreadyExists = function(req, res) {
  * @param  {object}    req   http request
  * @param  {object}    res   http response 
  * @param  {function}  next  middleware that moves execution to the next function
- * @param  {sting}     id    id of the group passed as a parameter in the url
+ * @param  {string}    id    id of the group passed as a parameter in the url
  */
 exports.groupById = function(req, res, next, id) { 
   Group.get(id).getJoin().run().then(function(doc) {
